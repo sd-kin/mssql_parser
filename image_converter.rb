@@ -13,8 +13,4 @@ module ImageToHexConverter
   file = File.open(image, 'rb')
   convert_base64_to_hex(convert_bin_to_base64(file))
   end
-
-  File.open('test.txt', 'w') do|f|
-    f.write(image_to_hex('photo.jpeg'))
-  end
 end

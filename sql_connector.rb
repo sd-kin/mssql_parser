@@ -47,6 +47,8 @@ module MSSQLOLEConnector
           # of columns, so we'll use the transpose method to 
           # convert it to an array of rows
           @data = @data.transpose
+          # make hash from data array
+          @data = @data.map{|x| Hash[@fields.zip(x)]}
       end
 
       def close
