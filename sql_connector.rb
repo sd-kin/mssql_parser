@@ -1,6 +1,6 @@
 require 'win32ole'
 
-module Connector
+module MSSQLOLEConnector
   class SqlServer
       # This class manages database connection and queries
       attr_accessor :connection, :data, :fields

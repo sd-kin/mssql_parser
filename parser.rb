@@ -1,5 +1,8 @@
 require './sql_connector'
-include Connector
+require './image_converter'
+
+include MSSQLOLEConnector
+include ImageToHexConverter
 
 db = SqlServer.new
 db.open
